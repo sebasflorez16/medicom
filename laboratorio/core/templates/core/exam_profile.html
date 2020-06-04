@@ -1,0 +1,97 @@
+
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Perfil de exámenes médicos{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+			<div class="page-head" data-bg-image="{% static 'core/images/project_head.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Perfiles</h2>
+					<small>Mira  lo tipo de exámenes y algunos requisitos previos a ellos.</small>
+				</div>
+			</div>
+
+<br><br><br>
+    <main class="main-content">
+
+    <div class="container">
+
+        <h1><strong>Perfil de los examenes en el laboratorio</strong></h1>
+        <br><br><br><br>
+        <h2>Perfil examenes general</h2>
+            <ul>
+                &ensp;&ensp;&ensp;&ensp;<li>Análisis de rutina recomendados al menos una vez al año, con los que se evalúa el estado general de salud,
+                además sirve para la prevención de enfermedades cardiovasculares y renales y de otras como: diabetes, gota, diversas infecciones y anemia.
+            Puedes encontrar examenes tales como: <br><br></li>
+              <ul type="circle">
+
+                <li>Cuadro Hemático</li>
+                <li>Uroanálisis</li>
+                <li>Coprológico</li>
+                <li>Colesterol Total</li>
+            </ul>
+        <br><br><br><br>
+
+        <h2>Perfil lipídico</h2>
+        <li>El perfil lipídico, también denominado perfil de riesgo coronario, es un grupo de exámenes diagnósticos de laboratorio clínico,
+            solicitados generalmente de manera conjunta, para determinar el estado del metabolismo de los lípidos corporales. Entre los
+        examenes mas comunes encontraras:<br><br></li>
+                <ul type="circle">
+
+                <li>Colesterol</li>
+                <li>Triglicéridos</li>
+                <li>LDLo</li>
+            </ul>
+    <br><br><br><br>
+        <h2>Perfil hepático</h2>
+        <li>El perfil hepático es un análisis de sangre en el que se mide la presencia de algunas enzimas, proteínas y bilirrubina en sangre, con el objetivo de determinar si existe alguna alteración en el hígado.
+
+            Es de especial utilidad en personas con ciertos trastornos o en tratamiento con fármacos potencialmente tóxicos para el hígado.
+            En personas con afectación hepática conocida, la determinación de estas pruebas se solicita regularmente con el fin de monitorizar el estado del órgano y evaluar la eficacia del tratamiento en caso de que exista.
+        Examenes mas recurrentes: <br><br></li>
+
+
+              <ul type="circle">
+
+                <li>Transaminasa Oxalacética (TGO)</li>
+                <li>Transaminasa Pirúvica (TGP)</li>
+                <li>Bilirrubinas diferenciadas</li>
+                <li>Electroforesis de proteínas</li>
+            </ul>
+
+
+
+    <br><br><br><br>
+        <h2>Perfil tiroideo</h2>
+        <li>Prueba especializada en la función de la glándula tiroidea que permite determinar desordenes como:<br><br>
+
+Hipertiroidismo:<br>
+
+Cuando la tiroides libera demasiada cantidad de sus hormonas en un período de tiempo corto (aguda) o largo (crónica).<br><br>
+
+Hipotiroidismo:<br>
+
+La glándula tiroides no es capaz de producir suficiente hormona tiroidea para mantener el cuerpo funcionando de manera normal.</li>
+
+<br><br>
+
+        <h2>Examen de embarazo</h2>
+        <li>Es una serie de estudios que se realizan como parte del control del embarazo que debe llevar una mujer durante la gestación. Cabe mencionar que es de suma importancia que la mujer embarazada lleve un control prenatal adecuado,
+            ya que esto le permitirá a su médico ginecólogo evaluar constantemente la salud tanto de la mamá como del bebé, y de esta manera poder detectar anomalías que pudieran presentarse durante el tiempo de embarazo.</li>
+<br><br>
+        <p>Si te sientes listo para solicitar tu examen en tu residencia vuelve el formulario dale click <b><a href="{% url 'project'%}">AQUI</a></b></p>
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+
+
+	{% extends 'core/base.html' %}
+
+	{% block title %}Proyectos{% endblock %}
+	{% load static %}
+
+	{% block content %}
+
+			<div class="page-head" data-bg-image="{% static 'core\images\dna-1811955_1920.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Nuestros proyectos</h2>
+					<small></small>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<h2 class="section-title">Para que siempre estés seguro.</h2>
+						<p>En los siguientes enlaces encontraras los principales servicios que tenemos disponibles para ti. Si ves que alguno no está disponible
+						es por que estamos trabajando fuerte día a día para estar listos para ti.</p>
+
+						<p>Siempre estamos evolucionando para darte la mejor atención.</p>
+					</div>
+				</div>
+}
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="project-list">
+
+							<div class="project">
+								<div class="project-content">
+									<figure class="project-image"><img src="{% static 'core/images/projects1.png' %}" alt=""></figure>
+									<h3 class="project-title">Exámenes médicos en casa.</h3>
+									<p>No tienes que salir, nosotros vamos hasta tu casa y hacemos todo el trabajo.</p>
+									<a href="{% url 'project' %}" class="button">Solicitar</a>
+								</div>
+							</div>
+
+							<div class="project">
+								<div class="project-content">
+									<figure class="project-image"><img src="{% static 'core/images/projects2.png' %}" alt=""></figure>
+									<h3 class="project-title">Medicina online</h3>
+									<p>Tenemos un medico para ti y online. Puedes tener una constulta desde cualquier parte.</p>
+									<a href="#" class="button">Aparta tu cita</a>
+								</div>
+							</div>
+
+							<div class="project">
+								<div class="project-content">
+									<figure class="project-image"><img src="{% static 'core/images/projects3.png' %}" alt=""></figure>
+									<h3 class="project-title">Formulación</h3>
+									<p>Según del diagnóstico de nuestros médicos online te ayudamos con tu formulación.</p>
+									<a href="#" class="button">Mas informacion</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</main> <!-- .main-content -->
+
+
+	{% endblock %}

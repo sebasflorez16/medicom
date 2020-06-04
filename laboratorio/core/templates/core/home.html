@@ -1,0 +1,177 @@
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+{% load static %}
+
+{% block content %}
+		<div class="hero">
+				<ul class="slides">
+					<li data-bg-image="{% static 'core\images\projects_item2.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title"><b>Exámenes médicos en casa</b></h2>
+								<p>Te tomamos tu exámenes médicos en tu casa. Ya no necesitas salir para tener los resultados nosotros vamos y te los entregamos </p>
+								<a href="{% url 'project' %}" class="button">Solicitar Examen</a>
+							</div>
+						</div>
+					</li>
+
+					<li data-bg-image="{% static 'core\images\slide_home1.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title"><b>Atención al detalle.</b></h2>
+								<p>Las mejores prácticas y responsabilidad, nuestros laboratorios aliados cumplen con todos los requisitos y estándares de calidad impuestas por el gobierno nacional.</p>
+								<a href="{% url 'about' %}" class="button">Leer mas</a>
+							</div>
+						</div>
+					</li>
+
+					<li data-bg-image="{% static 'core\images\dna-1811955_1920.jpg' %}">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title"><b>Sin salir de casa.</b></h2>
+								<p>Nuestro objetivo es brindarte comodidad y calidad. Sin salir de casa, tus exámenes quedaran en manos de los mejores profesionales de la salud.</p>
+								<a href="{% url 'blog' %}" class="button">Leer mas</a>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<div class="feature">
+									<img src="{% static 'core/images/icon-research-small.png' %}" alt="" class="feature-image">
+									<h2 class="feature-title">Labortatorio</h2>
+									<p>De nuestro lado laboratorios aprobados y con más de 25 años de experiencia en todo tipo de exámenes.</p>
+									<!-- <a href="" class="button">Leer mas</a> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="feature">
+									<img src="{% static 'core/images/icon-medicine-small.png' %}" alt="" class="feature-image">
+									<h2 class="feature-title">Medicina</h2>
+									<p>Médicos con la más alta calidad en servicio para paciente, formulación, diagnostico y seguimiento.</p>
+									<!-- <a href="" class="button">Leer mas</a> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="feature">
+									<img src="{% static 'core/images/icon-genetics-small.png' %}" alt="" class="feature-image">
+									<h2 class="feature-title">Genética</h2>
+									<p>Laboratorio genético para cualquier tipo de necesidad del paciente o el profesional de la salud.</p>
+									<!-- <a href="" class="button">Leer mas</a> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="feature">
+									<img src="{% static 'core/images/icon-energy-small.png' %}" alt="" class="feature-image">
+									<h2 class="feature-title">Compromiso</h2>
+									<p>Nuestra prioridad eres tú. Así que con profesionalismo nos encargamos de tus necesidades.</p>
+									<!-- <a href="" class="button">Leer mas</a> -->
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+						<h2 class="section-title">Ultimas Noticias</h2>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="post">
+									<figure class="featured-image"><img src="{% static 'core\images\home1.jpg' %}" alt=""></figure>
+									<h2 class="entry-title"><a href="">Controles sanitarios en la pandemia</a></h2>
+									<small class="date">2 oct 2014</small>
+									<p>Conoce las mejores practicas y habitos para la prevencion del coronavirus tales como lavado de manos...</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="post">
+									<figure class="featured-image"><img src="{% static 'core\images\FACULTAD_DE_MEDICINA,_UNIVERSIDAD_DE_ANTIOQUIA,_BLOQUE_DE_BIOQUÍMICA.jpg' %}" alt=""></figure>
+									<h2 class="entry-title"><a href="">Estudiantes colobianes encuentras cadena genetica del virus</a></h2>
+									<small class="date">2 oct 2014</small>
+									<p>Asi es en la ciudad de medellin mas exacto en la universidad de antiioquia estudiantes de genetica logran aislar...</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="post">
+									<figure class="featured-image"><img src="{% static 'core\images\home3.png' %}" alt=""></figure>
+									<h2 class="entry-title"><a href="">Tendencias en tapabocas</a></h2>
+									<small class="date">2 oct 2014</small>
+									<p>El coronavirus ha despertado en muchas personas la creatividad y el ingenio. Y el tapabocas no es la ecepcion generando tendencia...</p>
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .fullwidth-block -->
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h2 class="section-title">Nuestra misión.</h2>
+								<p>Compromiso. La prioridad de nuestra empresa es solucionar que nos impuso la pandemia del corona virus, el confinamiento y la necesidad de protegernos los unos a los otros. Trabajamos con los mejores profesionales para brindarte seguridad
+								y la confianza de confidencialidad para cualquier examen que debas hacerte.</p>
+								<h2 class="section-title">Nuestra visión</h2>
+								<p>Llegaremos a todos los hogares posibles para que sin necesidad de salir de casa puedas realizarte todos los exámenes que tengas que hacerte, con el único fin de brindarte comodidad y seguridad ya que empezamos con una situación que no veíamos venir y
+									que lamentablemente nos obliga a quedarnos en casa. Pero ahí estaremos nosotros con rapidez, confianza y alivio a tus problemas.</p>
+					<!--
+
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Research summaries</h2>
+								<ul class="arrow-list has-border">
+									<li><a href="#">Praesentium voluptatum deleniti atque dolores</a></li>
+									<li><a href="#">Corrupti quos et quas molestias excepturi sint</a></li>
+									<li><a href="#">Occaecati cupiditate non provident similique sunt</a></li>
+									<li><a href="#">Nam libero tempore, cum soluta nobis est eligendi</a></li>
+								</ul>
+								<a href="#" class="button">Show more</a>
+							</div>
+						</div>
+						-->
+					</div>
+				</div>
+	<br> <br>
+
+				<div class="fullwidth-block cta" data-bg-image="{% static 'core/images/home-adn.jpg'%}">
+					<div class="container">
+						<h2 class="cta-title">Encuentranos cerca de tu casa</h2>
+						<p>Estamos más cerca de lo que piensas. Solo llenando una solicitud o contactándonos estaremos en tu casa para atenderte. Claro primero
+						confirmando con tigo nuestra llegada para que estes en la disposición de atendernos y nosotros a ti.</p>
+						<a href="{% url 'contact' %}" class="button">Contactanos</a>
+					</div>
+				</div>
+
+			</main> <!-- .main-content -->
+
+
+	<!-- <div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+						{% if 'ok' in request.GET %}
+
+							<p>Ya estas inscrito a nuestras ultimas noticias</p>
+
+						{% endif %}
+
+						<form action="" method="POST">
+							{% csrf_token %}
+								<div class="subscribe-form">
+									<h2>Recibe nuestras noticias</h2>
+										<p>{{form.email}} Email</p>
+										<input type="submit" value="Subscribe">
+
+								</div>
+						</form>
+					</div>
+				</div> -->
+
+{% endblock %}

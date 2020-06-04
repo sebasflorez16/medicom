@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<head>
+		<!-- <link rel="shortcut icon" href="favicon.ico">  ac vamos a agregar la imagen de la pestaña-->
+		<title>{% block title %}{% endblock %} | MEDICOM</title>
+
+	{% load static %}
+
+			<link rel="icon" type="image/png" href="core/images/favicon.png">
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="{% static 'core/fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'core/style.css' %}">
+
+
+		<script src="{% static 'core/js/ie-support/html5.js' %}"></script>
+		<script src="{% static 'core/js/ie-support/respond.js' %}"></script>
+
+
+	</head>
+	<body>
+
+
+		<div class="site-content">
+			<header class="site-header collapsed-nav" data-bg-image="">
+				<div class="container">
+					<div class="header-bar">
+						<a href="{% url 'home' %}" class="branding">
+							<img src="{% static 'core/images/logo_head.png' %}" alt="" class="logo">
+							<div class="logo-type">
+								<h1 class="site-title">MEDICOM</h1>
+								<small class="site-description">Cerca de ti</small>
+							</div>
+						</a>
+						<nav class="main-navigation">
+							<button class="menu-toggle"><i class="fa fa-bars"></i></button> <!-- se debe configurar las urls para devolver la respuesta del hom y quitar el index -->
+							<ul class="menu">
+								<li class="home menu-item {% if request.path == '/' %} current-menu-item {% endif %}"><a href="{% url 'home' %}">Home</a></li>
+								<li class="menu-item {% if request.path == '/about/' %} current-menu-item {% endif %}"><a href="{% url 'about' %}">Acerca de nosotros</a></li>
+								<li class="menu-item {% if request.path == '/services/' %} current-menu-item {% endif %}"><a href="{% url 'services' %}">Servicios</a></li>
+								<li class="menu-item {% if request.path == '/projects/' %} current-menu-item {% endif %}"><a href="{% url 'projects' %}">Nuestros Proyectos</a></li>
+								<li class="menu-item {% if request.path == '/blog/' %} current-menu-item {% endif %}"><a href="{% url 'blog' %}">Blog</a></li>
+								<li class="menu-item {% if request.path == '/contact/' %} current-menu-item {% endif %}"><a href="{% url 'contact' %}">Contacto</a></li>
+							</ul>
+						</nav>
+						<div class="mobile-navigation"></div>
+					</div>
+				</div>
+			</header>
+
+			{% block content %}{% endblock %}
+
+		<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+
+
+					</div>
+
+		</div>
+
+	<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title">Encuentranos</h3>
+								<strong>MEDICOM</strong>
+								<address>Yopal, Casanare.</address>
+								<a href="https://api.whatsapp.com/send?phone=573223088873">Envianos un WhatsApp</a> <br>
+								<a href="{% url 'contact' %}">saludmedicom@gmail.com</a>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title">Enlaces de interes</h3>
+								<ul class="arrow-list">
+									<li><a href="https://www.minsalud.gov.co/">Casos confirmados de covid-19</a></li>
+									<li><a href="https://www.minsalud.gov.co/portada-covid-19.html">Notas de prevención</a></li>
+									<li><a href="https://www.minsalud.gov.co/portada-covid-19.html">Ministerio de salud</a></li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title">Algunos servicios</h3>
+								<ul class="arrow-list">
+									<li><a href="{% url 'project' %}">Examen en casa</a></li>
+									<li><a href="#">Consulta medica</a></li>
+									<li><a href="#">Farmacia hasta su casa</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widget">
+								<h3 class="widget-title"><b>REDES SOCIALES</b></h3>
+								<p>Síguenos en nuestras redes sociales, así estarás siempre informado y nuestras últimas actualizaciones.</p>
+								<div class="social-links">
+
+									{% if LINK_FACEBOOK %}
+									<a href="{{LINK_FACEBOOK}}"><i class="fa fa-facebook" ></i></a>
+									{% endif %}
+
+									{% if LINK_TWITTER %}
+									<a href="{{LINK_TWITTER}}"><i class="fa fa-twitter"></i></a>
+									{% endif %}
+
+									{% if LINK_INSTAGRAM %}
+									<a href="{{LINK_INSTAGRAM}}"><i class="fa fa-instagram"></i></a>
+									{% endif %}
+
+									{% if LINK_PINTEREST %}
+									<a href="{{LINK_PINTEREST}}"><i class="fa fa-pinterest"></i></a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div> <!-- .row -->
+
+					<p class="colophon">copyright 2020. Medicom <a href="#" title="Designed by Forma" target="_blank">MEDICOM</a>. All rights reserved</p>
+				</div> <!-- .container -->
+			</footer>
+			</div>
+
+			<script src="{% static 'core/js/jquery-1.11.1.min.js' %}"></script>
+			<script src="{% static 'core/js/plugins.js' %}"></script>
+			<script src="{% static 'core/js/app.js' %}"></script>
+
+		</body>
+
+	</html>

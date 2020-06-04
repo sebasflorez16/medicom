@@ -1,0 +1,64 @@
+
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Servicios{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+
+			<div class="page-head" data-bg-image="{% static 'core\images\imagen_bacteria.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Servicios</h2>
+					<small></small>
+				</div>
+			</div>
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h2 class="section-title"><b>Sección de servicios.</b></h2>
+								<p>En todo lo relacionado a tu comodidad pero primero tu salud, mejoramos todos los días para brindarte los mejores
+								servicios. Ciertamente te tendremos informado de cualquier nuevo servicio.</p>
+
+								<p>En esta sección encontraras algunos de nuestros servicios disponibles y los proyectos en los que trabajamos día a día para ti.</p>
+
+								<p>Escoge el servicio que necesitas, nosotros te guiaremos en cada paso del proceso. No dudes en preguntar
+								si tienes alguna inquietud acerca de nuestros procesos. De igual forma siempre estamos dispuesto a mejorar para que
+								tengas una experiencia agradable y cómoda</p>
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Cuidate en todo momento</h2>
+								<p>Mientras salimos de esta crisis del COVID-19, siempre cumple con las medidas de higiene para prevenir
+									y mitigar los efectos de este virus del que aún no se ha encontrado vacuna.</p>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+	<!-- estos son los bloques de servicios preestablecidos -->
+
+
+
+				<div class="fullwidth-block">
+					<div class="container">
+						{% for service in services %}
+						<div class="boxed-icon">
+							<img src="{{service.image.url}}" alt="" >
+							<h3>{{service.title}}</h3>
+							<p>{{service.content}}</p>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+
+			<!-- seccion de recibe nuestras ultimas noticias -->
+
+	{% endblock %}

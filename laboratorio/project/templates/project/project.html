@@ -1,0 +1,90 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Proyecto{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+
+			<div class="page-head" data-bg-image="{% static 'core/images/project_head.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Proyecto</h2>
+					<small>Diligencia el siguiente formulario para solicitar tu examen a domicilio.</small>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<a href="{% url 'projects' %}" class="button back"><img src="{% static 'core/images/arrow-back.png' %}" alt="">Vuelve a projectos</a>
+						<div class="row">
+							<div class="col-md-6">
+								<figure>
+									<img src="{% static 'core/images/form_user.png' %}" alt="">
+								</figure>
+							</div>
+
+						 <!-- si se en el views se cumple todas las sentencias hasta llegar al '?ok' envia mensaje al usuario -->
+
+
+							{% if 'ok' in request.GET %}
+								<p><b>Hemos recibido tu solicitud en breve nos comunicaremos con tigo</b></p>
+							{% endif %}
+
+						<form action="" method="POST" enctype="multipart/form-data">
+							{% csrf_token %} <!-- es un toquen de seguridad que ninguna otra pagina tiene otra pagina para evitar que otras paginas mal intencionadas entren a lo que se envia -->
+							<div class="row contact-form">
+						 	<form action="#">
+						 		<div class="col-md-4">
+						 			<p> {{form.name}} Nombre</p>
+						 			<p> {{form.addres}} Dirección de Residencia</p>
+						 			<p> {{form.phone}} Telefono</p>
+									<p> {{form.email}} Correo Electronico</p>
+									<p> {{form.exam}} Tipo de Examen </p>
+									<p> {{form.id}} Cédula</p>
+									{{form.image}} Orden (Adjunta una foto de la orden de tus examenes)
+						 		</div>
+						 		<div class="col-md-8">
+						 			<p class="text-right">
+						 				<input type="submit" value="Enviar">
+						 			</p>
+						 		</div>
+						 	</form>
+						 </div>
+
+						</form>
+
+						</div>
+						<br>
+						<p>En el siguiente enlace encontraras los perfil de casa examen No olvides revisarlo. <a href="{% url 'exam_profile' %}"><b>PERFIL DE EXAMENES</b></a></p>
+
+                        <p>Recomendaciones antes de tomarte los exàmenes.<a href="{% url 'exam_requeriments' %}"><b>AQUI</b></a></p>
+                        <br> <br> <br>
+						<div class="row">
+							<div class="col-md-6">
+								<p>ASí FUNCIONA: Al momento de llenar todos tus datos nos llega la orden de servicio para ti. Luego nos comunicaremos con tigo para que
+								nuestro personal te tome la muestra donde nos has indicado en la sección de dirección.</p>
+
+								<p>Recuerda estar atento de el día y la fecha en que hemos acordado con tigo.
+								Luego nuestro sistema entregara tus resultados (exceptuando algún tipo de examen) vía electrónica en tu dirección de correo electrónico que nos haz
+								indicado.</p>
+
+								<p>Sabemos que tus datos son muy importantes, así que nos hemos encargado de darles el manejo profesional que requiere.
+								Todos tus datos son y serán parte del requisito informativo que necesitamos para tramitar tu solicitud así que no tienes de que preocuparte.</p>
+							</div>
+							<div class="col-md-6">
+								<p>Es muy importante adjuntar una foto de tu orden para los exámenes, así sera más grata tu experiencia con nosotros. Luego de que todo
+								tu proceso ha finalizado y tengas tus resultados nuestro sistema eliminara de la base de datos todo aquello que es importante
+								para tu seguridad, como numero de identificación, dirección de residencia, teléfono etc. Esto con el fin de protegerte siempre.</p>
+
+								<p>Nuestros visitadores siempre estarán debidamente identificados al momento de ir a tu casa.</p>
+								<p>Si tienes alguna duda acerca de nuestro servicio recuerda que estamos para ayudarte. No dudes en enviarnos tus comentarios. <a href="{% url 'contact' %}"><b>AQUI</b></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+		{% endblock %}

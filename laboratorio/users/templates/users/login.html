@@ -1,0 +1,40 @@
+
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Login{% endblock %}
+{% load static %}
+
+
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+  <div class="row">
+    <div class="Absolute-Center is-Responsive">
+      <div id="logo-container"></div>
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <h2><b>Ingresa tu primer apellido y numero de cedula para ver tu resultados</b></h2>
+
+        <form action="" method="POST" >
+          {% csrf_token %}
+          {{ form.as_p }}
+
+          <br>
+
+          <div class="form-group">
+            <button type="button"><a href="{% url 'welcome' %}">Login</a></button>
+          </div>
+          <br>
+          <div class="form-group text-center">
+            <a href="{% url 'register' %}">Crear usuario</a>&nbsp;| <!--<a href="#">Support</a>-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+{% endblock %}

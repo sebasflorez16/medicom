@@ -1,0 +1,91 @@
+
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Condiciones para toma de muestras{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+			<div class="page-head" data-bg-image="{% static 'core/images/home2.png' %}">
+				<div class="container">
+					<h2 class="page-title">Condiciones</h2>
+					<small>Estos son las condiciones a tomar en cuenta pr tomarte los examenes medicos</small>
+				</div>
+			</div>
+
+<br><br><br>
+    <main class="main-content">
+
+    <div class="container">
+
+        <h1><strong>Perfil de los examenes en el laboratorio</strong></h1>
+        <h3>Recuerde que los exámenes serán tomados en las horas de la mañana a temprana hora.</h3>
+        <br><br><br><br>
+        <h2>Condiciones para examenes general</h2>
+
+              <ul type="circle">
+                <li>Ayuno máximo de 12 horas, especialmente para Colesterol y Triglicéridos.</li>
+                <li>No ingerir bebidas alcohólicas 3 días antes de los exámenes.</li>
+                <li>No fumar antes de la realización del examen.</li>
+                <li>Si le han hecho exámenes radiológicos con medios de contraste, espere cuando menos dos días antes de tomarse exámenes de laboratorio.</li>
+            </ul>
+        <br><br><br><br>
+
+        <h2>Glicemia</h2>
+                <ul type="circle">
+
+                <li>Durante su procedimiento debe permanecer, sin fumar, sin masticar chicle y en reposo.</li>
+                <li>La noche anterior ingerir una comida normal, 12 horas antes de tomar la muestra.</li>
+            </ul>
+    <br><br><br><br>
+        <h2>Orina</h2>
+              <ul type="circle">
+
+                <li>Es importante recoger el total de la orina de cada micción sin derramar y estrictamente de 24 horas,
+                    puede iniciar al levantarse (anote la hora) desocupe su vejiga y deseche esta primera toma, luego
+                    recoja toda la orina de la mañana.</li>
+                <li>No recoger la orina durante el periodo menstrual.</li>
+                <li>No se recibirán muestras en envases que hayan contenido sustancias diferentes a agua.</li>
+                <li>Seguir dieta normal, NO beber más agua de la habitual.</li>
+            </ul>
+
+
+
+    <br><br><br><br>
+        <h2>Antigeno Prostatico</h2>
+
+
+
+        <ul type="circle">
+
+                <li>No tener relaciones sexuales durante 2 dias antes de tomar la mestra.</li>
+                <li>Si le han practicado masaje prostático debe esperar 2 días para tomarse el examen.</li>
+                <li>Después de una prostatectomía o biopsia prostática debe esperar 10 días como mínimo para su examen de PSA.</li>
+            </ul>
+
+<br><br>
+
+                <h2>Sangre oculta en materia fecal</h2>
+
+        <ul type="circle">
+
+                <li>Tres días antes de la recolección de la muestra no ingerir carnes rojas, rábanos, coliflor, brócoli, manzana, bananos, uva, café, té, vitamina E y medicamentos como Aspirina.</li>
+                <li>Abstenerse de ingerir bebidas alcohólicas y/u oscuras.</li>
+                <li>No fumar para evitar alteraciones.</li>
+            </ul>
+
+<br><br>
+        <p>Si te sientes listo para solicitar tu examen en tu residencia vuelve el formulario dale click <b><a href="{% url 'project'%}">AQUI</a></b></p>
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}

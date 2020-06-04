@@ -1,0 +1,62 @@
+
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Blog{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+
+			<div class="page-head" data-bg-image="{% static 'core\images\imagen_bacteria.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Services</h2>
+					<small>CERCA DE TI</small>
+				</div>
+			</div>
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<h2 class="section-title">Blog y Noticias</h2>
+								<p>Te mantendremos informado de cada acontecimiento en nuestra empresa y por supuesto en el mundo de la medicina.
+								Lee y comparte nuestras ultimas publicaciones que son para ti.</p>
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Cuidate en todo momento</h2>
+
+								<p>Mientras salimos de esta crisis del COVID-19, siempre cumple con las medidas de higiene para prevenir
+									y mitigar los efectos de este virus del que aun no se ha encontrado vacuna.</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+	<!-- estos son los bloques de servicios preestablecidos -->
+
+
+				<div class="fullwidth-block">
+					<div class="container">
+								{% for publi in publi %}
+						<br><br><br><br>
+							<div class="project">
+								<div class="project-content" %}>
+									<figure class="project-image"><img src="{{publi.image.url}}" alt=""></figure>
+									<h3 class="project-title">{{publi.title}}</h3>
+									<p>{{publi.content}}</p>
+									<!--<a href="project.html" class="button">Learn more</a>-->
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+
+
+			<!-- seccion de recibe nuestras ultimas noticias -->
+
+	{% endblock %}

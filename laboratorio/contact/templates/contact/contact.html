@@ -1,0 +1,79 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Contactanos{% endblock %}
+{% load static %}
+
+{% block content %}
+
+			<div class="page-head" data-bg-image="{% static 'core/images/home1.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Contactanos</h2>
+					<small>CERCA DE TI</small>
+				</div>
+			</div>
+
+			<main class="main-content">
+				
+				<div class="fullwidth-block">
+					<div class="container">
+						 <div class="{% static 'map' %}" data-latitude="-6.897789" data-longitude="107.621735"></div>
+
+						 <div class="row">
+						 	<div class="col-md-4">
+						 		<div class="boxed-content">
+						 			<h2 class="section-title">Address</h2>
+						 			<address>
+						 				<p>Laboratrio clinico del llano</p>
+										<p>Carrera 20 #15-21</p>
+									</address>
+						 		</div>
+						 	</div>
+						 	<div class="col-md-4">
+						 		<div class="boxed-content">
+						 			<h2 class="section-title">Telefonos</h2>
+						 			<p><strong>Office:</strong> +57 322 30999731</p>
+									<p><strong>Support:</strong> +57 322 3099973</p>
+						 		</div>
+						 	</div>
+						 	<div class="col-md-4">
+						 		<div class="boxed-content">
+						 			<h2 class="section-title">Email</h2>
+						 			<p><strong>Office:</strong> <a href="mailto:office@companyname.com">office@companyname.com</a></p>
+									<p><strong>Support:</strong> <a href="mailto:support@companyname.com">support@companyname.com</a></p>
+						 		</div>
+						 	</div>
+						 </div>
+
+						{% if 'ok' in request.GET %} <!-- si se en el views se cumple todas las sentencias hasta llegar al '?ok' envia mensaje al usuario -->
+
+						<p><b>El mensaje ha sido enviado. Pronto nos pondremos en contacto</b></p>
+
+						{% endif %}
+
+						<form action="" method="POST">
+							{% csrf_token %} <!-- es un toquen de seguridad que ninguna otra pagina tiene otra pagina para evitar que otras paginas mal intencionadas entren a lo que se envia -->
+							<div class="row contact-form">
+						 	<form action="#">
+						 		<div class="col-md-4">
+						 			<p> {{form.name}} Nombre</p>
+						 			<p> {{form.email}} Correo electronico.</p>
+						 			<p> {{form.site}} Sitio web (Opcional).</p>
+						 		</div>
+						 		<div class="col-md-8">
+						 			<p>
+						 				{{form.content}} Escribe aqui tu mensaje.
+						 			</p>
+						 			<p class="text-right">
+						 				<input type="submit" value="Enviar">
+						 			</p>
+						 		</div>
+						 	</form>
+						 </div>
+
+						</form>
+						</div>
+				</div>
+
+			</main> <!-- .main-content -->
+
+	{% endblock %}

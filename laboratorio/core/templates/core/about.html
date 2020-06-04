@@ -1,0 +1,134 @@
+
+
+{% extends 'core/base.html' %}
+
+{% block title %}Nosotros{% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="page-head" data-bg-image="{% static 'core\images\dna-1811955_1920.jpg' %}">
+				<div class="container">
+					<h2 class="page-title">Acerca de nosotros</h2>
+					<small></small>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<h2 class="section-title">¿Por que nosotros?</h2>
+								<ol class="circle">
+									<li>
+										<h3>Vamos hasta tu casa</h3>
+										<p>El principal servicio de nuestra empresa es tomarte los exámenes a domicilio</p>
+									</li>
+									<li>
+										<h3>Laboratorio con más de 25 años de experiencia</h3>
+										<p>El laboratorio que elijamos para ti cumple con todos los lineamientos del estado para operar</p>
+									</li>
+									<li>
+										<h3>Prioridad en tu salud</h3>
+										<p>Diagnósticos en tiempo récord pero, certeros y 100% veraces. En resumen confiables</p>
+									</li>
+								</ol>
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">¿Necesitas otra razón?</h2>
+								<p>Nuestras capacidades a lo largo de los años no hacen los mejores en servicio de laboratorio.</p>
+								<ul class="arrow-list has-border">
+									<li>Insumos de primera calidad.</li>
+									<li>Instalaciones habilitadas.</li>
+									<li>Mira tus resutados online.</li>
+									<li>Podemos agendar tu consulta medica.</li>
+									<li>Nuestros visitadores estarán debidamente identificados.</li>
+									<li>Inocuidad en todos los procesos desde recolección hasta diagnostico.</li>
+									<li>Te mantendremos informado en todo tiempo.</li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<h2 class="section-title">Testimonios</h2>
+								<ul class="testimonial-list">
+									<li>
+										<blockquote>
+											<p>El servicio perfecto para esta crisis. Atención de calidad y los resultados me los entregaron rápido a mí y a mi mama</p>
+											<cite>Angelica Vela</cite>
+										</blockquote>
+									</li>
+								</ul>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->		
+				</div> <!-- .fullwidth-block -->
+
+
+
+				<div class="fullwidth-block" data-bg-color="#edf2f4">
+					<div class="container">
+					<!--	<h2 class="section-title">Our team</h2>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="team">
+									<img src="{% static 'core/images/person-1.jpg' %}" alt="" class="team-image">
+									<h3 class="team-name">Howard Hanson</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="team">
+									<img src="{% static 'core/images/person-2.jpg' %}" alt="" class="team-image">
+									<h3 class="team-name">Jannet Smith</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="team">
+									<img src="{% static 'core/images/person-3.jpg' %}" alt="" class="team-image">
+									<h3 class="team-name">Paul Newman</h3>
+									<p>Praesentium deleniti atque corrupti quos dolores molestias excepturi.</p>
+									<div class="social-links">
+										<a href=""><i class="fa fa-facebook"></i></a>
+										<a href=""><i class="fa fa-twitter"></i></a>
+										<a href=""><i class="fa fa-google-plus"></i></a>
+										<a href=""><i class="fa fa-pinterest"></i></a>
+									</div>
+								</div>
+							</div>
+
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div>
+
+
+
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="boxed-icon">
+							<img src="{{service.image.url}}" alt="" >
+							<h3>ES HORA DEL CAMBIO</h3>
+							<p>No te expongas más. Nuestro personal va hasta tu casa con todos los protocolos de bioseguridad y recogerá tu muestra. No tendrás que hacer filas
+							ni perder tiempo. </p>
+						</div>
+					</div>
+				</div>
+
+
+
+			</main> <!-- .main-content -->
+
+{% endblock %}
