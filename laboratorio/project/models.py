@@ -43,3 +43,19 @@ class Examenes(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+#compruea que si el modelo ha sido guardado ejecuta el signal y activa la funcion de enviar mail
+# esto solo muestra el signal de que ha habido una actualizacion al admin es decir alguien ha puesto algo en da DB
+@receiver(post_save, sender=Examenes)
+def examenes_save(sender, instance, **kwargs):
+    if kwargs['created']:
+        send_mail(
+            'MEDICOM',
+            '''Hay un nuevo pedido de examen medico.
+             El usuario: %s,    Direccion: %s       Telefono: %s
+             Email: %s
+             Tipo de examen: %s             Identificación: %s''' %(instance.name, instance.addres, instance.phone, instance.email, instance.exam, instance.id),
+            'forexample@gmail.com', #de quien viene el mensaje
+            ['saludmedicom@gmail.com'],
+            fail_silently=False,
+        )

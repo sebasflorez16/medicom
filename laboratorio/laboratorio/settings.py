@@ -144,5 +144,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'saludmedicom@gmail.com'
-EMAIL_HOST_PASSWORD = 'guibsonsid.16'
+EMAIL_HOST_PASSWORD = 'contraseña'
 EMAIL_PORT = 587
